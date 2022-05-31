@@ -47,6 +47,13 @@
             android:hint="Mật Khẩu Đăng Nhập"
             android:id="@+id/edtPassDN"/>
     </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/tvDangKy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng Ký tài Khoản?"
+        android:layout_margin="10dp"
+        android:layout_gravity="right"/>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnDN"
         android:layout_width="150dp"
