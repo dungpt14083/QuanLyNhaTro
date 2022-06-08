@@ -67,6 +67,8 @@ public class FragmentHome extends Fragment {
 
             @Override
             public void onFailure(Call<List<NhaTro>> call, Throwable t) {
+                Toast.makeText(getContext(),"lõi "+t,Toast.LENGTH_SHORT).show();
+                Log.e("LoiGETDATA", "onFailure: "+t );
 
             }
         });

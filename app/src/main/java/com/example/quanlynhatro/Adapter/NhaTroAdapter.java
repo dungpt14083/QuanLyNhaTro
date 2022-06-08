@@ -56,7 +56,7 @@ public class NhaTroAdapter extends RecyclerView.Adapter<NhaTroAdapter.ViewHolder
                 bundle.putInt("tinhtrang",nhaTros.getTinhtrang());
                 bundle.putString("giaphong",nhaTros.getGiaphong());
                 bundle.putString("mota",nhaTros.getMota());
-                bundle.putString("hinhanh",nhaTros.getHinhanh());
+//                bundle.putString("hinhanh",nhaTros.getHinhanh());
                 intent.putExtras(bundle);
                 context.startActivity(intent);
 
@@ -80,7 +80,7 @@ public class NhaTroAdapter extends RecyclerView.Adapter<NhaTroAdapter.ViewHolder
             super(itemView);
             imgTro = itemView.findViewById(R.id.img_danhsach);
             cardView = itemView.findViewById(R.id.cardviewds);
-            tvtest = itemView.findViewById(R.id.tvtest);
+            tvtest = itemView.findViewById(R.id.tvChiTiet);
         }
     }
 }
