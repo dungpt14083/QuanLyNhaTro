@@ -59,6 +59,7 @@ public class NhaTroAdapter extends RecyclerView.Adapter<NhaTroAdapter.ViewHolder
 //                bundle.putString("hinhanh",nhaTros.getHinhanh());
                 intent.putExtras(bundle);
                 context.startActivity(intent);
+                //thanhcong
 
             }
         });
