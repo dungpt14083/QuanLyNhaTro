@@ -46,11 +46,39 @@ public class DangKyActivity extends AppCompatActivity {
 
                 }
                 else {
-                    postData(edtname.getText().toString(),edtemail.getText().toString(),edtpass.getText().toString());
-                    Toast.makeText(DangKyActivity.this,"Thanh Cong",Toast.LENGTH_SHORT).show();
+
+                    if(validate()>0)
+                    {
+                        postData(edtname.getText().toString(),edtemail.getText().toString(),edtpass.getText().toString());
+                        Toast.makeText(DangKyActivity.this,"Thanh Cong",Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(DangKyActivity.this,"Vui Lòng Kiểm tra Lại Thông Tin Nhập",Toast.LENGTH_SHORT).show();
+                    }
+
                 }
+
             }
         });
+    }
+    public int validate(){
+        int check=1;
+        if(edtpass.equals(edtrepass))
+        {
+            Toast.makeText(this,"Mật Khẩu không trùng khớp",Toast.LENGTH_SHORT).show();
+
+            check = -1;
+
+        }
+      else if(edtpass.length() <= 6)
+        {
+            Toast.makeText(this,"Mật khẩu phải hơn 6 kí tự",Toast.LENGTH_SHORT).show();
+
+            check = -1;
+
+        }
+      return check;
+
     }
     private void postData(String username,String email,String password){
         Retrofit retrofit = new Retrofit.Builder()

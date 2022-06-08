@@ -21,35 +21,30 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
-                android:text="địa chỉ"
+                android:text="Tên Phòng"
                 android:layout_margin="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_chitiet_diachi"/>
+                android:id="@+id/tv_chitiet_tenphong"/>
             <TextView
                 android:layout_margin="8dp"
-                android:text="số tầng"
+                android:text="Tình Trạng"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_chitiet_sotang"/>
+                android:id="@+id/tv_chitiet_tinhtrang"/>
             <TextView
                 android:layout_margin="8dp"
                 android:text="số phòng"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_chitiet_sophong"/>
+
             <TextView
                 android:layout_margin="8dp"
-                android:text="diện tích"
+                android:text="Mô Tả"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_chitiet_dientich"/>
-            <TextView
-                android:layout_margin="8dp"
-                android:text="tiện ích"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_chitiet_tienich"/>
+                android:id="@+id/tv_chitiet_mota"/>
             <TextView
                 android:textStyle="bold"
                 android:textSize="20dp"
