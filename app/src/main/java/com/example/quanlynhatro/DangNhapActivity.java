@@ -61,7 +61,7 @@ public class DangNhapActivity extends AppCompatActivity {
 
     void postLogin(String email,String password){
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://tiendungne.herokuapp.com/apiUser/user/")
+                .baseUrl("http://192.168.0.105:8080/apiUser/user/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         ApiInterface apiInterface = retrofit.create(ApiInterface.class);

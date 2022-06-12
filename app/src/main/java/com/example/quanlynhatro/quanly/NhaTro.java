@@ -1,19 +1,21 @@
 package com.example.quanlynhatro.quanly;
 
+import java.util.ArrayList;
+
 public class NhaTro {
     private String _id;
     private String idloaiphong;
     private String tenphong;
     private int tinhtrang;
     private String giaphong;
-    private String[] hinhanh;
+    private ArrayList<String> hinhanh;
     private String mota;
     private String __v;
 
     public NhaTro() {
     }
 
-    public NhaTro(String _id, String idloaiphong, String tenphong, int tinhtrang, String giaphong, String[] hinhanh, String mota, String __v) {
+    public NhaTro(String _id, String idloaiphong, String tenphong, int tinhtrang, String giaphong, ArrayList<String> hinhanh, String mota, String __v) {
         this._id = _id;
         this.idloaiphong = idloaiphong;
         this.tenphong = tenphong;
@@ -64,11 +66,11 @@ public class NhaTro {
         this.giaphong = giaphong;
     }
 
-    public String[] getHinhanh() {
+    public ArrayList<String> getHinhanh() {
         return hinhanh;
     }
 
-    public void setHinhanh(String[] hinhanh) {
+    public void setHinhanh(ArrayList<String> hinhanh) {
         this.hinhanh = hinhanh;
     }
 

@@ -46,7 +46,7 @@ public class FragmentHome extends Fragment {
         nhaTroAdapter = new NhaTroAdapter(getContext(),nhaTroList);
         recyclerView.setAdapter(nhaTroAdapter);
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://tiendungne.herokuapp.com/apiPhong/")
+                .baseUrl("http://192.168.0.105:8080/apiPhong/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         ApiInterface apiInterface = retrofit.create(ApiInterface.class);

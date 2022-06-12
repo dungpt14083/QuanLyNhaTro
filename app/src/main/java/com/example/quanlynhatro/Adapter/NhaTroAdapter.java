@@ -33,7 +33,6 @@ public class NhaTroAdapter extends RecyclerView.Adapter<NhaTroAdapter.ViewHolder
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
        View view = LayoutInflater.from(context).inflate(R.layout.item_danhsach,parent,false);
-
         return new ViewHolder(view);
     }
 
@@ -56,7 +55,7 @@ public class NhaTroAdapter extends RecyclerView.Adapter<NhaTroAdapter.ViewHolder
                 bundle.putInt("tinhtrang",nhaTros.getTinhtrang());
                 bundle.putString("giaphong",nhaTros.getGiaphong());
                 bundle.putString("mota",nhaTros.getMota());
-//                bundle.putString("hinhanh",nhaTros.getHinhanh());
+                bundle.putStringArrayList("hinhanh",nhaTros.getHinhanh());
                 intent.putExtras(bundle);
                 context.startActivity(intent);
                 //thanhcong

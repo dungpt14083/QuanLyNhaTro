@@ -2,15 +2,23 @@ package com.example.quanlynhatro;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.quanlynhatro.Adapter.ImageAdapter;
+
+import java.util.ArrayList;
 
 public class DetailTro extends AppCompatActivity {
     TextView tvTenPhong,tvTinhTrang,tvGiaPhong,tvmoTa;
-
-
+    RecyclerView listAnh;
+    ImageAdapter imageAdapter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +27,7 @@ public class DetailTro extends AppCompatActivity {
         tvTinhTrang = findViewById(R.id.tv_chitiet_tinhtrang);
         tvGiaPhong = findViewById(R.id.tv_chitiet_giatien);
         tvmoTa = findViewById(R.id.tv_chitiet_mota);
+        listAnh = findViewById(R.id.listAnh);
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         if(bundle!=null){
@@ -28,13 +37,18 @@ public class DetailTro extends AppCompatActivity {
             {
                 tvTinhTrang.setText("Còn Phòng");
             }
-            else {
+            else if (tt==2){
                 tvTinhTrang.setText("Hết Phòng");
             }
 
             tvGiaPhong.setText("Giá Phòng: "+bundle.getString("giaphong"));
 
             tvmoTa.setText("Mô Tả: "+bundle.getString("mota"));
+            ArrayList<String> image = bundle.getStringArrayList("hinhanh");
+            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+            listAnh.setLayoutManager(layoutManager);
+            imageAdapter = new ImageAdapter(this,image);
+            listAnh.setAdapter(imageAdapter);
         }
 
     }
