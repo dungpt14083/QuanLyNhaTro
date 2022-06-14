@@ -44,6 +44,7 @@ public class DetailTro extends AppCompatActivity {
                 Intent intent1 = new Intent(Intent.ACTION_DIAL);
                 intent1.setData(Uri.parse("tel:"+strPhone));
                 startActivity(intent1);
+                //xonglienhe
             }
         });
 //        int gp = Integer.parseInt(bundle.getString("giaphong"));
