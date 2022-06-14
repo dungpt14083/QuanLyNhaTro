@@ -55,29 +55,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+
         android:layout_marginTop="10dp"
         >
+
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_chitiet_lienhe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nhắn Tin"
-            android:backgroundTint="#2c2c2c"
-            android:layout_gravity="center"
-
-            app:cornerRadius="10dp"
-            android:id="@+id/btn_chitiet_nhantin"
-            android:layout_marginLeft="80dp"/>
-       <com.google.android.material.button.MaterialButton
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Liên Hệ"
-           app:cornerRadius="10dp"
-           android:backgroundTint="#2c2c2c"
-           android:layout_gravity="center"
-           android:id="@+id/btn_chitiet_lienhe"
-           android:layout_margin="10dp"/>
-
-
+            android:layout_marginLeft="150dp"
+            android:backgroundTint="@color/Buttons"
+            android:text="Liên Hệ"
+            app:cornerRadius="10dp" />
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
