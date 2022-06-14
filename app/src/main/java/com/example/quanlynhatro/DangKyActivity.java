@@ -51,6 +51,7 @@ public class DangKyActivity extends AppCompatActivity {
                     {
                         postData(edtname.getText().toString(),edtemail.getText().toString(),edtpass.getText().toString());
                         Toast.makeText(DangKyActivity.this,"Thanh Cong",Toast.LENGTH_SHORT).show();
+                        xoafrom();
                     }
                     else {
                         Toast.makeText(DangKyActivity.this,"Vui Lòng Kiểm tra Lại Thông Tin Nhập",Toast.LENGTH_SHORT).show();
@@ -60,6 +61,13 @@ public class DangKyActivity extends AppCompatActivity {
 
             }
         });
+    }
+    void xoafrom()
+    {
+        edtname.setText("");
+        edtpass.setText("");
+        edtrepass.setText("");
+        edtemail.setText("");
     }
     public int validate(){
         int check=1;
@@ -82,7 +90,8 @@ public class DangKyActivity extends AppCompatActivity {
     }
     private void postData(String username,String email,String password){
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.0.105:8080/apiUser/user/")
+                .baseUrl("https://tiendungne.herokuapp.com/apiUser/user/")
+//                .baseUrl("http://192.168.1.5:8080/apiUser/user/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         ApiInterface apiInterface = retrofit.create(ApiInterface.class);
@@ -98,7 +107,7 @@ public class DangKyActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Users>> call, Throwable t) {
 
-                Toast.makeText(DangKyActivity.this,"Đăng Ký thất bại",Toast.LENGTH_SHORT).show();
+                Toast.makeText(DangKyActivity.this,"",Toast.LENGTH_SHORT).show();
             }
         });
     }

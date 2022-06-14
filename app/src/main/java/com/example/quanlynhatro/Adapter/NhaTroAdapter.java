@@ -45,6 +45,7 @@ public class NhaTroAdapter extends RecyclerView.Adapter<NhaTroAdapter.ViewHolder
             return;
         }
 //        Glide.with(holder.imgTro.getContext()).load(nhaTros.getHinhanh()).into(holder.imgTro);
+
         holder.tvtest.setText(nhaTros.getTenphong());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override

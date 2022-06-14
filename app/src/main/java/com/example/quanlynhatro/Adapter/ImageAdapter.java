@@ -36,7 +36,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageHolder>
     @Override
     public void onBindViewHolder(@NonNull ImageAdapter.ImageHolder holder, int position) {
         for (int i = 0 ; i< list.size();i++){
-            Glide.with(context).load("http://192.168.0.105:8080"+list.get(i)).into(holder.imageView);
+            Glide.with(context).load("https://tiendungne.herokuapp.com"+list.get(i)).into(holder.imageView);
+//            Glide.with(context).load("http://192.168.1.5:8080"+list.get(i)).into(holder.imageView);
         }
     }
 

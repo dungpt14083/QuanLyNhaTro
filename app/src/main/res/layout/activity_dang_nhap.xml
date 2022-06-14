@@ -27,13 +27,14 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtTenDN"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:layout_marginLeft="50dp"
-            android:hint="Tên Đăng Nhập"
-            android:id="@+id/edtTenDN"/>
+            android:layout_marginTop="50dp"
+            android:hint="Email" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"
