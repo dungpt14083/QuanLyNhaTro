@@ -86,7 +86,7 @@ public class DangNhapActivity extends AppCompatActivity {
 
                 }catch (Exception e)
                 {
-                    Toast.makeText(DangNhapActivity.this,"login Failed"+e,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DangNhapActivity.this,"login Failed!Please check email or password",Toast.LENGTH_SHORT).show();
                 }
             }
 

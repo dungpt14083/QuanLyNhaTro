@@ -14,6 +14,8 @@ import com.example.quanlynhatro.quanly.Users;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -71,6 +73,8 @@ public class DangKyActivity extends AppCompatActivity {
     }
     public int validate(){
         int check=1;
+        Pattern p1 = Pattern.compile("^\\w+@\\w+\\.\\w+$");
+        Matcher m1 = p1.matcher(edtemail.getText().toString());
         if(edtpass.equals(edtrepass))
         {
             Toast.makeText(this,"Mật Khẩu không trùng khớp",Toast.LENGTH_SHORT).show();
@@ -78,12 +82,20 @@ public class DangKyActivity extends AppCompatActivity {
             check = -1;
 
         }
-      else if(edtpass.length() <= 6)
+        else if (!edtname.getText().toString().substring(0,1).toUpperCase().equals(edtname.getText().toString().substring(0,1))) {
+            Toast.makeText(this, "Kí tự đầu tên đăng nhập phải viết hoa", Toast.LENGTH_SHORT).show();
+             check=-1;
+        }
+        else if(edtpass.length() <= 6)
         {
             Toast.makeText(this,"Mật khẩu phải hơn 6 kí tự",Toast.LENGTH_SHORT).show();
 
             check = -1;
 
+        }
+        else if (m1.find() == false) {
+            Toast.makeText(this, "Email chưa đúng định dạng", Toast.LENGTH_SHORT).show();
+            check=-1;
         }
       return check;
 

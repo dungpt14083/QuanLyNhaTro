@@ -43,8 +43,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="50dp"
+            android:inputType="textEmailAddress"
 
             android:hint="Email"
             android:id="@+id/edtemailDK"/>
@@ -55,7 +56,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="50dp"
             android:inputType="textPassword"
             android:hint="Mật Khẩu Đăng Nhập"
@@ -67,7 +68,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="50dp"
             android:inputType="textPassword"
             android:hint="Nhập Lại Mật Khẩu Đăng Nhập"

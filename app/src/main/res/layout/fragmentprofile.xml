@@ -47,22 +47,7 @@
             android:textSize="30dp"
             android:layout_margin="10dp"
             android:id="@+id/tv_profile_sdt"/>
-        <TextView
-            android:textColor="@color/Buttons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="khu Vực:"
-            android:textSize="30dp"
-            android:layout_margin="10dp"
-            android:id="@+id/tv_profile_khuvuc"/>
-        <TextView
-            android:textColor="@color/Buttons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Giới Tính:"
-            android:textSize="30dp"
-            android:layout_margin="10dp"
-            android:id="@+id/tv_profile_gioitinh"/>
+
         <TextView
             android:textColor="@color/Buttons"
             android:layout_width="match_parent"
